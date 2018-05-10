@@ -7,10 +7,13 @@
             <h1><a href="">RED SKY BLOG</a></h1>
         </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">notes about clouds</a></h2>
-            <p>Clouds are redb, blue, white, and float high in the sky. Sometimes they look like shapes even.</p>
-        </div>
+	{% for post in posts %}
+	<div>
+	  <p>published: {{ post.published_date }}</p>
+	  <h1><a href="">{{ post.title }}</a></h1>
+	  <p>{{ post.text|linebreaksbr }}</p>
+	</div>
+	{% endfor %}
+
     </body>
 </html>
