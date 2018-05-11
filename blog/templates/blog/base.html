@@ -1,8 +1,7 @@
-{% extends 'blog/base.html' %}
 {% load staticfiles %}
 
 <html>
-
+  
   <head>
     <title>RED SKY BLOG</title>
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
@@ -13,20 +12,16 @@
 
   <body>
     <div class="page-header">
-      <h1><a href="">RED SKY BLOG</a></h1>
-	</div>
-
-  {% block content %}
-  {% for post in posts %}
-  <div class="post">
-    <div class="date">
-      <p>{{ post.published_date }}</p>
+        <h1><a href="/">Red Sky Blog</a></h1>
     </div>
-    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-    <p>{{ post.text|linebreaksbr }}</p>
-  </div>
-  {% endfor %}
-  {% endblock %}
-
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
   </body>
+
 </html>
