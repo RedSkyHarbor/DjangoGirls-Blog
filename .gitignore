@@ -4,5 +4,6 @@ __pycache__
 myvenv
 db.sqlite3
 secret_key.txt
+db_key.txt
 /static
 .DS_Store
